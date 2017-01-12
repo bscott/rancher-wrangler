@@ -3,7 +3,8 @@ development:
   database: rancher-wrangler_development
   user: postgres
   password: postgres
-  host: 127.0.0.1
+  host: localhost
+  port: 32768
   pool: 5
 
 test:
@@ -11,7 +12,8 @@ test:
   database: rancher-wrangler_test
   user: postgres
   password: postgres
-  host: 127.0.0.1
+  host: localhost
+  port: 32768
 
 production:
   url: {{envOr "DATABASE_URL" "postgres://postgres:postgres@127.0.0.1:5432/rancher-wrangler_production"}}
