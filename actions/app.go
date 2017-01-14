@@ -29,6 +29,8 @@ func App() *buffalo.App {
 
 		app.GET("/hosts", HostsIndex)
 		app.GET("/hosts/create", HostsCreate)
+		app.GET("/hosts/show", HostsShow)
+		app.POST("/hosts/new", HostsNew)
 		app.ServeFiles("/assets", assetsPath())
 	}
 

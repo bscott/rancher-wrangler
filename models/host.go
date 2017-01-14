@@ -15,7 +15,7 @@ import (
 type Host struct {
 	ID uuid.UUID `json:"id" db:"id"`
 	Name string `json:"name" db:"name"`
-	Description string `json:"description" db:"desc"`
+	Description string `json:"description" db:"description"`
 	Url string `json:"url" db:"url"`
 	ApiVersion string `json:"api_version" db:"api_version"`
 	AccessKey string `json:"access_key" db:"access_key"`
