@@ -24,7 +24,7 @@ func (v *HostsResource) Show(c buffalo.Context) error {
 
 // New default implementation.
 func (v *HostsResource) New(c buffalo.Context) error {
-	return c.Render(200, r.String("Hosts#New"))
+	return c.Render(200, r.HTML("hosts_new.html"))
 }
 
 // Create default implementation.
