@@ -27,6 +27,8 @@ func App() *buffalo.App {
 
 		app.GET("/", HomeHandler)
 
+		app.GET("/hosts", HostsIndex)
+		app.GET("/hosts/create", HostsCreate)
 		app.ServeFiles("/assets", assetsPath())
 	}
 

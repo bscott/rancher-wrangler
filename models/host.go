@@ -8,10 +8,12 @@ import (
 	"github.com/markbates/pop"
 
 	"github.com/markbates/validate"
+
+	"github.com/satori/go.uuid"
 )
 
-type Hosts struct {
-	ID int `json:"id" db:"id"`
+type Host struct {
+	ID uuid.UUID `json:"id" db:"id"`
 	Name string `json:"name" db:"name"`
 	Description string `json:"description" db:"desc"`
 	Url string `json:"url" db:"url"`
@@ -23,13 +25,13 @@ type Hosts struct {
 }
 
 // String is not required by pop and may be deleted
-func (h Hosts) String() string {
+func (h Host) String() string {
 	b, _ := json.Marshal(h)
 	return string(b)
 }
 
 // Hosts is not required by pop and may be deleted
-type Hosts []Hosts
+type Hosts []Host
 
 // String is not required by pop and may be deleted
 func (h Hosts) String() string {
@@ -39,7 +41,7 @@ func (h Hosts) String() string {
 
 // Validate gets run everytime you call a "pop.Validate" method.
 // This method is not required and may be deleted.
-func (h *Hosts) Validate(tx *pop.Connection) (*validate.Errors, error) {
+func (h *Host) Validate(tx *pop.Connection) (*validate.Errors, error) {
 
 	return validate.NewErrors(), nil
 
@@ -47,12 +49,12 @@ func (h *Hosts) Validate(tx *pop.Connection) (*validate.Errors, error) {
 
 // ValidateSave gets run everytime you call "pop.ValidateSave" method.
 // This method is not required and may be deleted.
-func (h *Hosts) ValidateSave(tx *pop.Connection) (*validate.Errors, error) {
+func (h *Host) ValidateSave(tx *pop.Connection) (*validate.Errors, error) {
 	return validate.NewErrors(), nil
 }
 
 // ValidateUpdate gets run everytime you call "pop.ValidateUpdate" method.
 // This method is not required and may be deleted.
-func (h *Hosts) ValidateUpdate(tx *pop.Connection) (*validate.Errors, error) {
+func (h *Host) ValidateUpdate(tx *pop.Connection) (*validate.Errors, error) {
 	return validate.NewErrors(), nil
 }

@@ -1,0 +1,3 @@
+create_table("hosts", func(t) {
+	t.Column("id", "uuid", {"primary": true})
+})
