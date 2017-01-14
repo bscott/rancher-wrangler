@@ -6,37 +6,37 @@ import (
 	"github.com/stretchr/testify/require"
 )
 
-func Test_HostsResource_List(t *testing.T) {
+func Test_Resource_List(t *testing.T) {
 	r := require.New(t)
 	r.Fail("Not Implemented!")
 }
 
-func Test_HostsResource_Show(t *testing.T) {
+func Test_Resource_Show(t *testing.T) {
 	r := require.New(t)
 	r.Fail("Not Implemented!")
 }
 
-func Test_HostsResource_New(t *testing.T) {
+func Test_Resource_New(t *testing.T) {
 	r := require.New(t)
 	r.Fail("Not Implemented!")
 }
 
-func Test_HostsResource_Create(t *testing.T) {
+func Test_Resource_Create(t *testing.T) {
 	r := require.New(t)
 	r.Fail("Not Implemented!")
 }
 
-func Test_HostsResource_Edit(t *testing.T) {
+func Test_Resource_Edit(t *testing.T) {
 	r := require.New(t)
 	r.Fail("Not Implemented!")
 }
 
-func Test_HostsResource_Update(t *testing.T) {
+func Test_Resource_Update(t *testing.T) {
 	r := require.New(t)
 	r.Fail("Not Implemented!")
 }
 
-func Test_HostsResource_Destroy(t *testing.T) {
+func Test_Resource_Destroy(t *testing.T) {
 	r := require.New(t)
 	r.Fail("Not Implemented!")
 }
