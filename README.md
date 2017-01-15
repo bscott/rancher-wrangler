@@ -1,47 +1,39 @@
-# rancher-wrangler
+# rancher-wrangler a.k.a "The Wrangler"
 
 ## Documentation
+Wrangler is a Central Web Interface to see detailed Information about multiple Rancher Management Servers.
+ This is not a Web application for Rancher Server Federation (e.g Kubernetes Federation). In it's present state,
+ this tool is very bare bones, Hosts added are then queried every so often for data via the API, such as the Server Version, Docker version, etc.
 
-To view generated docs for rancher-wrangler, run the below command and point your brower to http://127.0.0.1:6060/pkg/
+ ## Getting Started
+ For dependency management, we're using [Glide](https://github.com/Masterminds/glide).
 
-    godoc -http=:6060 2>/dev/null &
+ * UNIX/Linux
 
-### Buffalo
+ ```
+ curl https://glide.sh/get | sh
+ ```
 
-http://gobuffalo.io/docs/getting-started
+ * MacOSX
 
-### Pop/Soda
+ ```
+ brew install glide
+ ```
 
-http://gobuffalo.io/docs/db
+ * Ubuntu
 
-## Database Configuration
+ ```
+ sudo add-apt-repository ppa:masterminds/glide && sudo apt-get update
+ sudo apt-get install glide
+ ```
 
- 	development:
- 		dialect: postgres
- 		database: rancher-wrangler_development
- 		user: <username>
- 		password: <password>
- 		host: 127.0.0.1
- 		pool: 5
+ Versions are managed in the `glide.yaml` file and a subsequent `glide.lock` file is created.
 
- 	test:
- 		dialect: postgres
- 		database: rancher-wrangler_test
- 		user: <username>
- 		password: <password>
- 		host: 127.0.0.1
-
- 	production:
- 		dialect: postgres
- 		database: rancher-wrangler_production
- 		user: <username>
- 		password: <password>
- 		host: 127.0.0.1
- 		pool: 25
+ Once Glide is installed we need to make sure that we have the PostgreSQL image downloaded, have the container built, schema loaded, and dependencies installed. To accomplish this, run the below command.
 
  ### Running Migrations
 
-    buffalo soda migrate
+    buffalo db migrate
 
  ## Run Tests
 
@@ -50,6 +42,10 @@ http://gobuffalo.io/docs/db
  ## Run in dev
 
     buffalo dev
+
+ ## Releases will be pushed to Docker Hub as Images
+
+    bscott/rancher-wrangler
 
 [Powered by Buffalo](http://gobuffalo.io)
 
