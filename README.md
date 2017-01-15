@@ -23,7 +23,8 @@ Wrangler is a Central Web Interface to see detailed Information about multiple R
  * Ubuntu
 
  ```
- sudo add-apt-repository ppa:masterminds/glide && sudo apt-get update
+ sudo add-apt-repository ppa:masterminds/glide 
+ sudo apt-get update
  sudo apt-get install glide
  ```
 
