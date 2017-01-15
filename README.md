@@ -5,6 +5,10 @@ Wrangler is a Central Web Interface to see detailed Information about multiple R
  This is not a Web application for Rancher Server Federation (e.g Kubernetes Federation). In it's present state,
  this tool is very bare bones, Hosts added are then queried every so often for data via the API, such as the Server Version, Docker version, etc.
 
+## Screenshot ( Caution: Work in progress)
+![alt text](screenshot.png)
+
+
 ## Getting Started
  For dependency management, we're using [Glide](https://github.com/Masterminds/glide).
 
