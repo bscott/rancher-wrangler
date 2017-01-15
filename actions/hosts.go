@@ -34,4 +34,9 @@ import (
 			return c.Render(200, r.String("Host Created"))
 
 		}
+
+		// HostsUpdate implements the update of an Host entry
+		func HostsUpdate(c buffalo.Context) error {
+
+		}
         
