@@ -22,17 +22,15 @@ import (
                 }
 		// HostsNew implements creation of a new host.
 		func HostsNew (c buffalo.Context) error {
-			//name := c.Param("name")
-			//desc := c.Param("description")
-			//url := c.Param("url")
-			//api_version := c.Param("api_version")
-			//access_key := c.Param("access_key")
-			//secret_key := c.Param("secret_key")
-			params := c.Params()
-			host := models.Host{Name: params.Get("name"),Description: params.Get("description"),Url: params.Get("url"),ApiVersion: params.Get("api_version"),AccessKey: params.Get("access_key"),SecretKey: params.Get("secret_key")}
+			name := c.Request().FormValue("name")
+			desc := c.Request().FormValue("description")
+			url := c.Request().FormValue("url")
+			api_version := c.Request().FormValue("api_version")
+			access_key := c.Request().FormValue("access_key")
+			secret_key := c.Request().FormValue("secret_key")
+			host := models.Host{Name: name,Description: desc,Url: url,ApiVersion: api_version,AccessKey: access_key,SecretKey: secret_key}
 			models.DB.Create(&host)
-			models.DB.Save(&host)
-			c.LogField("Host Created:", host)
+			c.LogField("Host Created:", &host)
 			return c.Render(200, r.String("Host Created"))
 
 		}
