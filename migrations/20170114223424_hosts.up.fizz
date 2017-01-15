@@ -1,0 +1,6 @@
+add_column("hosts","name", "string", {"null":true})
+add_column("hosts","description", "string", {"null":true})
+add_column("hosts","url", "string", {"null":true})
+add_column("hosts","api_version", "string", {"null":true})
+add_column("hosts","access_key", "string", {"null":true})
+add_column("hosts","secret_key", "string", {"null":true})

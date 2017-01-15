@@ -9,11 +9,10 @@ import (
 
 	"github.com/markbates/validate"
 
-	"github.com/satori/go.uuid"
 )
 
 type Host struct {
-	ID uuid.UUID `json:"id" db:"id"`
+	ID int `json:"id" db:"id"`
 	Name string `json:"name" db:"name"`
 	Description string `json:"description" db:"description"`
 	Url string `json:"url" db:"url"`
