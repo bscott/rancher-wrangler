@@ -12,7 +12,7 @@ import (
                 // HostsIndex default implementation.
                 func HostsIndex(c buffalo.Context) error {
 
-                    return c.Render(200, r.HTML("hosts/index.html"))
+                    return c.Render(200, r.HTML("hosts/_index.html"))
                 }
                 // HostsCreate default implementation.
                 func HostsCreate(c buffalo.Context) error {
