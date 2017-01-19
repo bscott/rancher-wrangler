@@ -57,3 +57,8 @@ func (h *Host) ValidateSave(tx *pop.Connection) (*validate.Errors, error) {
 func (h *Host) ValidateUpdate(tx *pop.Connection) (*validate.Errors, error) {
 	return validate.NewErrors(), nil
 }
+
+// Function to update the rancher version
+func (h *host) UpdateServerVersion (tx *pop.Connection) (*validate.Errors, error) {
+	
+}
