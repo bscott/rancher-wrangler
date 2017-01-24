@@ -1,0 +1,15 @@
+<div class="row"> </div> <div class="col-md-10"> </div>
+<h1>Wrangler - Edit host to inventory</h1> 
+<hr> 
+<form class="host-edit-form" action="/hosts/update" method="put"> 
+    Name for Host (e.g. My Rancher Server): <input type="text" name="name" value="{{ host.Name }}" /> <br/>
+    Description of Host (e.g. Rancher Server in AWS US West 2): <input type="text" name="description" value="{{ host.Description }}" /> <br/>
+    Rancher Server URL (e.g. https://rancher.domain.com:8080/): <input type="text" name="url" value="{{ host.Url }}" /> 
+    <br/> 
+    Rancher API Access Key:  <input type="text" name="access_key" value="{{ host.AccessKey }}" /> 
+    <br/> 
+    Rancher API Secret Key:  <input type="text" name="secret_key" value="{{ host.SecretKey }}" /> 
+    <br/>
+     <br/> 
+    <input type="submit" name="update" value="Update" /> 
+</form>
