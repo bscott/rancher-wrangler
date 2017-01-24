@@ -36,7 +36,7 @@ import (
 
 		}
 
-		// HostEdit implements the update of an Host entry
+		// HostEdit implements the edit of an Host entry
 		func HostsEdit(c buffalo.Context) error {
 			var hh models.Host
 			//models.DB.All(&hh)
@@ -52,4 +52,22 @@ import (
 			c.Set("host", hh)
 			return c.Render(200, r.HTML("hosts/_edit.html"))
 		}
+
+		// HostUpdate implements the update of an Host entry
+		func HostsUpdate(c buffalo.Context) error {
+			var hh models.Host
+			//models.DB.All(&hh)
+			var id = c.Param("id")
+
+			err := models.DB.Find(&hh, id)
+
+			if err != nil {
+				return c.Error(500, err)
+			}
+
+
+			c.Set("host", hh)
+			return c.Render(200, r.HTML("hosts/_edit.html"))
+		}
+
         
